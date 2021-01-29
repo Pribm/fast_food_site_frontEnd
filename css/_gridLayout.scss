@@ -1,0 +1,268 @@
+.hero{
+    background-color: rgb(247, 182, 20);
+    background: url('../img/hero_background.png');
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "navigation navigation" "mainText mainImage";
+     @include tablet{
+        grid-template-rows: 20vh 30vh 60vh;
+        grid-template-areas: "navigation navigation" "mainText mainText" "mainImage mainImage";
+    }
+
+    @include tablet_landscape{
+        grid-template-rows: 10vh 90vh;
+        grid-template-areas: "navigation navigation" "mainText mainImage";
+    }
+
+    &__imageSection{
+        grid-area: mainImage;
+       
+    }
+    
+    &__title{
+        grid-area: mainText;
+    }
+}
+
+.navbar{
+    grid-area: navigation;
+}
+
+/*----------------------------------------------------------------------*/
+
+.gallery{
+    display: grid;
+    grid-template-rows: 60vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image_left images_right";
+
+    @include tablet{
+        grid-template-rows: 33vh 66vh;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "image_left image_left"
+        "images_right images_right";
+        row-gap: 4vh;
+    }
+
+    &__left_side{
+        grid-area: image_left;
+        display: grid;
+    }
+
+    &__right_side{
+        grid-area: images_right;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "row1" "row2";
+        gap: 20px;
+ 
+        &_container_row_1{
+            grid-area: row1;
+           
+        }
+
+        &_container_row_2{
+            grid-area: row2;
+ 
+        }
+    }
+}
+
+/*---------------------------------------------------------------------------------*/
+
+.chooseBurguer{
+    &_row_1{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 75px;
+    }
+
+    &_row_2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        text-align: center;
+        @include tablet{
+            display:inline;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------*/
+.carousel{
+    &__container{
+        &_slide_1{
+            margin: 30px;
+           box-shadow: 1px 10px 20px 0px rgba(0,0,0,0.3);
+           display: grid;
+           grid-template-rows: 35vh;
+           grid-template-columns: 1fr 1fr;
+           grid-template-areas: 'text img';
+           padding: 10px;
+           gap: 10px;
+           @include tablet{
+               grid-template-rows: 45vh 35vh;
+               grid-template-columns: 1fr;
+               grid-template-areas: 'text text' 'img img';
+           }
+        }
+    }
+
+    &__text_side{
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        & h2 {
+            font-family: $mainFont;
+            font-weight: 100;
+            color: $logoColor;
+            font-size: 4vh;
+            line-height: 4vh;
+        }
+
+        & h1{
+            font-family: $heroFont;
+            font-weight: 100;
+            color: $logoColor;
+            font-size: 5vh;
+            line-height: 5vh;
+        }
+
+        & p{
+            margin-top: 20px;
+            font-family: $pFont;
+            font-weight: 100;
+            color: $logoColor;
+            font-size: 2vh;
+        }
+    }
+
+    &__image_side{
+        background: url('../img/burguerCarousel1.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-area: img;
+    }
+}
+
+/*---------------------------------------------------------------------*/
+.booking{
+    height: 100vh;
+    background: url('../img/booking_bg.png') no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-row: 100vh;
+    grid-column: 1fr;
+    @include tablet{
+        background-position: -130px ;
+    }
+
+    &__container{
+        //background-color: yellowgreen;
+        width: 50vw;
+        padding-top: 20vh;
+        margin-inline: auto;
+        display: grid;
+        grid-template-rows: 30vh 20vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'top' 'body';
+        justify-content: center;
+
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        grid-area: top;
+    }
+
+    &__data{
+        grid-area: body;
+        display: grid;
+        gap: 1vw;
+        grid-template-columns: 1fr 1fr;
+        @include tablet{
+            margin-top: 10px;
+            grid-template-columns: 1fr;
+            gap: 2vh;
+            grid-template-rows: 5vh 5vh 5vh 5vh 5vh 5vh;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.footer{
+    color: white;
+    margin: 40px;
+    padding-inline: 30px;
+    background: url('../img/footer_bg.png') no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 15vh 15vh 6vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'logo logo'
+    'text contacts'
+    'credits mediaIcons';
+    gap: 2vw;
+
+    @include tablet{
+        grid-template-rows: 15vh 15vh 15vh 15vh 6vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'logo logo'
+        'text text'
+        'contacts contacts'
+        'mediaIcons mediaIcons'
+        'credits credits';
+    }
+
+    &__logo{
+        grid-area: logo;
+        align-self:center;
+        @include tablet{
+            width: 100%;
+        }
+    }
+
+    &__text{
+        grid-area: text;
+        text-align: start;
+        @include tablet{
+            text-align: center;
+        }
+    }
+
+    &__credits{
+        grid-area: credits;
+        text-align: start;
+        @include tablet{
+            text-align: center;
+        }
+    }
+
+    &__contacts{
+        grid-area: contacts;
+        justify-self: center;
+        @include tablet{
+            align-self: flex-end;
+        }
+    }
+
+    &__social_media_icons{
+        grid-area: mediaIcons;
+        justify-self: end;
+        @include tablet{
+            align-self: center;
+            justify-self: center;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.booking{
+
+
+    & input{
+        border-radius: 8px;
+        border: solid lightgray 2px;
+        padding-left: 20px;
+        &::placeholder{
+            font-family: $mainFont;
+        }
+
+        &:focus{
+            border: solid rgb(168, 168, 168) 2px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    & button{
+        background-color: #bf2222;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        font-family: $heroFont;
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        line-height: 1rem;
+        letter-spacing: 0.1rem;
+
+        &:hover{
+            transition: all 0.5s ease;
+            background-color: #9b1616 ;
+            cursor: pointer;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        & h1{
+            font-family: $heroFont;
+            font-size: 3rem;
+            color: $logoColor;
+        }
+
+        & h2{
+            font-family: $mainFont;
+            color: $logoColor;
+        }
+    }
+}

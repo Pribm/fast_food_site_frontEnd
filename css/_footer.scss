@@ -1,0 +1,18 @@
+.footer{
+    & p{
+        font-family: $pFont;
+        line-height: 1.5rem;
+        @include tablet{
+            font-size: 0.8rem;
+        }
+    }
+
+    & h3{
+        padding-left: 10px;
+        font-family: $mainFont;
+        font-weight: 100;
+        @include tablet{
+            font-size: 1rem;
+        }
+    }
+}

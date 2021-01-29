@@ -1,0 +1,66 @@
+.chooseBurguer{
+    &_row_1{
+        & h4{
+            background-color: #ffc045;
+            display: inline-block;
+            padding: 10px;
+            font-family: $mainFont;
+            color: $logoColor;
+            font-size:1.5rem;
+            font-weight: 100;
+        }
+
+        & h1{
+            font-family: $heroFont;
+            font-weight: 100;
+            color: $logoColor;
+            font-size: 3rem;
+        }
+
+        & p{
+            font-family: $pFont;
+        }
+    }
+
+    &_row_2{
+        @for $i from 1 through 3 {
+            &_burguer_#{$i}{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 80px;
+
+                & h1{
+                    font-family: $mainFont;
+                    font-size: 2rem;
+                    color: $logoColor;
+                }
+
+                & p{
+                    font-family: $pFont;
+                    width: 60%;
+                    margin-top: 10px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                & a{
+                   font-family: $heroFont;
+                   font-size: 1.2rem;
+                   background-color: #bf2222;
+                   color: white;
+                   padding: 15px;
+                   width: 40%;
+                   margin-top: 30px;
+                   margin-bottom: 30px;
+                   margin-inline: auto ;
+
+                   &:hover{
+                    background-color: #771717;
+                    transform: scale(1.1);
+                    transition: all 0.3s ease-in-out;
+                   }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@mixin imageTitle {
+    & h2{
+        font-family: $mainFont;
+        color: white;
+        font-weight: 100;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    & h1{
+        font-family: $mainFont;
+        color: white;
+        font-weight: 100;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.gallery{
+
+    &__left_side{
+        padding: 30px;
+        &_container{
+            background: url('../img/BurgerImage.png') no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            padding: 30px;
+            @include imageTitle;
+        }
+    }
+
+    &__right_side{
+        padding: 30px;
+        @include tablet{
+            padding: 0px 30px 0px 30px ;
+        }
+        &_container_row_1{
+            background: url('../img/BurgerImage2.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            border-radius: 15px;
+            @include imageTitle;
+        }
+
+        &_container_row_2{
+            background: url('../img/BurgerImage3.png') no-repeat;
+            
+            background-size: cover;
+            background-position: 0px -110px;
+            padding: 30px;
+            border-radius: 15px;
+            @include imageTitle;
+            @include tablet{
+                background-position: bottom;
+            }
+        }
+    }
+}
