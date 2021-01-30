@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html, body {
+  width: 100vw;
+}
+
 @font-face {
   font-family: 'Alfa Slab One';
   src: url("../fonts/AlfaSlabOne-Regular.ttf") format("truetype");
@@ -23,8 +27,6 @@
 }
 
 .hero {
-  background-color: #f7b614;
-  background: url("../img/hero_background.png");
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20vh 80vh;
@@ -415,6 +417,12 @@
   left: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  .navbar__logo {
+    width: 80%;
+  }
+}
+
 .navbar__contact {
   float: right;
   margin-top: 30px;
@@ -470,7 +478,7 @@
   .navbar__bars {
     display: inline-block;
     position: absolute;
-    top: 60px;
+    top: 90px;
     right: 30px;
     font-size: 2rem;
     border-radius: 5px;
@@ -481,6 +489,9 @@
 }
 
 .hero {
+  background-color: #f7b614;
+  background: url("../img/hero_background.png");
+  background-size: cover;
   width: 100vw;
   /*-------------------------------------------------------------------*/
 }
@@ -609,6 +620,7 @@
 .hero__title__text h1 {
   font-family: "Alfa Slab One";
   font-size: 8vw;
+  color: #3d2514;
 }
 
 @media screen and (max-width: 1024px) {
@@ -623,6 +635,7 @@
 .hero__title__text h2 {
   font-family: "Alfa Slab One";
   font-size: 8vw;
+  color: #3d2514;
 }
 
 @media screen and (max-width: 1024px) {

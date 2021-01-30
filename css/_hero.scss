@@ -1,10 +1,12 @@
 .hero{
+    background-color: rgb(247, 182, 20);
+    background: url('../img/hero_background.png');
+    background-size: cover;
     width: 100vw;
     &__imageSection{
         position: relative;
         display: flex;
         flex-direction: column;
-        //background-color: royalblue;
 
         & img{
             width: 100%;
@@ -98,6 +100,7 @@
             & h1{
                 font-family: $heroFont;
                 font-size: 8vw;
+                color: $logoColor;
                 @include tablet{
                     align-self: center;
                     font-size: 15vw;
@@ -107,6 +110,7 @@
             & h2{
                 font-family: $heroFont;
                 font-size: 8vw;
+                color: $logoColor;
                 @include tablet{
                     align-self: center;
                     font-size: 12vw;

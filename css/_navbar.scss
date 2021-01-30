@@ -5,6 +5,9 @@
         position: absolute;
         top: 30px;
         left: 30px;
+        @include tablet{
+            width: 80%;
+        }
     }
 
     &__contact{
@@ -54,7 +57,7 @@
         @include tablet{
             display: inline-block;
             position: absolute;
-            top: 60px;
+            top: 90px;
             right: 30px; 
             font-size: 2rem;
             border-radius: 5px;

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="hero">
+    <section class="hero" id="hero_section">
         <nav class="navbar">
             <a href="#"><img src="../img/Logo.png" alt="burguerhouse" class="navbar__logo"><a>
                     <p class="navbar__contact">Express delivery +1 234 567 890</p>
@@ -20,15 +20,15 @@
                     </div>
 
                     <ul class="navbar__navLinks">
-                        <li class="navbar__link"><a href="#">Home</a></li>
-                        <li class="navbar__link"><a href="#">Menu</a></li>
+                        <li class="navbar__link"><a href="#hero_section">Home</a></li>
+                        <li class="navbar__link"><a href="#menu_section">Menu</a></li>
                         <li class="navbar__link"><a href="#">Our Story</a></li>
                         <li class="navbar__link"><a href="#">Contact Us</a></li>
                     </ul>
         </nav>
 
         <div class="hero__title">
-            <div class="hero__title__text">
+            <div class="hero__title__text" >
                 <p>IT IS A GOOD TIME FOR THE GREAT TASTE OF BURGUERS</p>
                 <h1>BURGUER</h1>
                 <h2>WEEK</h2>
@@ -38,7 +38,7 @@
         <div class="hero__imageSection">
 
             <div class="hero__image_and_price">
-                <img src="../img/Image_burguer_hero.png" alt="burguer">
+                <img src="../img/Image_burguer_hero.png" class="hero__burguer" alt="burguer">
 
                 <div class="hero__price">
                     <span>
@@ -48,7 +48,6 @@
                     </span>
                 </div>
             </div>
-
         </div>
 
     </section>
@@ -88,7 +87,7 @@
         </div>
     </section>
 
-    <section class="chooseBurguer">
+    <section class="chooseBurguer" id="menu_section">
         <div class="chooseBurguer_row_1">
             <h4>ALWAYS TASTY BURGUER</h4>
             <h1>CHOOSE & ENJOY</h1>
@@ -176,5 +175,21 @@
         </div>
     </section>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+<script>
+    const tlInfinity = new TimelineMax({repeat:-1});
+    const tl = new TimelineMax();
+    const bg = document.querySelector('.hero');
+    const price = document.querySelectorAll('.hero__price');
+    const heroBurguer = document.querySelectorAll('.hero__burguer');
+
+    tlInfinity.to(bg, 45, {
+        backgroundPosition: "-2247px 0px"
+    });
+
+  
+
+</script>
 
 </html>
