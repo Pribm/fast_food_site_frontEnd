@@ -1,7 +1,8 @@
 .navbar{
+    margin-top: 15px;
     position: relative;
     width:100%;
-    height: 12vh;
+    height: 45%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -9,23 +10,48 @@
     align-items: center;
 
     &__logo{
-
+        height:100%;
         & img{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
             width: 100%;
         }
     }
 
     &__navLinks{
         display: flex;
+        
+        @include tablet{
+            flex-direction: column;
+            background-color: honeydew;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-inline: auto;
+            margin-top: 10%;
+            width: 80vh;
+            height: 70vh;
+            z-index: 40;
+            border-radius: 25px;
+            box-shadow: 0px 5px 5px 0px rgba($color: #000000, $alpha: .4);
+        }
     }
 
     &__navLinks li a{
         color: white;
         font-family: $mainFont;
         padding: 10px;
+        font-size: 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            color: $logoColor;
+        }
 
         @include tablet{
-            display: none;
+            color: $logoColor;
+            line-height: 100px;
         }
     }
 
@@ -33,10 +59,7 @@
         display: none;
 
         @include tablet{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 5%;
+            position: relative;
             width: 50px;
             height: 50px;
             border-radius: 10%;
