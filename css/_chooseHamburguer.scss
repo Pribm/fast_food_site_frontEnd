@@ -47,6 +47,7 @@
                    font-family: $heroFont;
                    font-size: 1.2rem;
                    background-color: #bf2222;
+                   border-radius: 10px;
                    color: white;
                    padding: 15px;
                    width: 40%;
@@ -56,6 +57,7 @@
 
                    &:hover{
                     background-color: #771717;
+                    border-radius:65px;
                     transform: scale(1.1);
                     transition: all 0.3s ease-in-out;
                    }

@@ -7,8 +7,23 @@
   text-decoration: none;
 }
 
+.all {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 html, body {
   width: 100vw;
+}
+
+.part_two {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+  z-index: 30;
+  -webkit-box-shadow: 0px -5px 18px -3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px -5px 18px -3px rgba(0, 0, 0, 0.4);
 }
 
 @font-face {
@@ -471,6 +486,7 @@ html, body {
 }
 
 .hero {
+  overflow: hidden;
   background-color: #f7b614;
   background: url("../img/hero_background.png");
   background-size: cover;
@@ -611,9 +627,12 @@ html, body {
 
 .gallery__left_side_container {
   background: url("../img/BurgerImage.png") no-repeat;
-  background-size: cover;
+  background-position: center center;
+  background-size: 100%;
   border-radius: 15px;
   padding: 30px;
+  -webkit-transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .gallery__left_side_container h2 {
@@ -632,6 +651,10 @@ html, body {
   line-height: 3rem;
 }
 
+.gallery__left_side_container:hover {
+  background-size: 115%;
+}
+
 .gallery__right_side {
   padding: 30px;
 }
@@ -644,10 +667,12 @@ html, body {
 
 .gallery__right_side_container_row_1 {
   background: url("../img/BurgerImage2.png") no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   padding: 30px;
   border-radius: 15px;
+  -webkit-transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .gallery__right_side_container_row_1 h2 {
@@ -666,12 +691,22 @@ html, body {
   line-height: 3rem;
 }
 
+.gallery__right_side_container_row_1:hover {
+  background-size: 115%;
+}
+
+.gallery__right_side_container_row_2:hover {
+  background-size: 115%;
+}
+
 .gallery__right_side_container_row_2 {
   background: url("../img/BurgerImage3.png") no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: 0px -110px;
   padding: 30px;
   border-radius: 15px;
+  -webkit-transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .gallery__right_side_container_row_2 h2 {
@@ -746,6 +781,7 @@ html, body {
   font-family: "Alfa Slab One";
   font-size: 1.2rem;
   background-color: #bf2222;
+  border-radius: 10px;
   color: white;
   padding: 15px;
   width: 40%;
@@ -756,6 +792,7 @@ html, body {
 
 .chooseBurguer_row_2_burguer_1 a:hover {
   background-color: #771717;
+  border-radius: 65px;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.3s ease-in-out;
@@ -791,6 +828,7 @@ html, body {
   font-family: "Alfa Slab One";
   font-size: 1.2rem;
   background-color: #bf2222;
+  border-radius: 10px;
   color: white;
   padding: 15px;
   width: 40%;
@@ -801,6 +839,7 @@ html, body {
 
 .chooseBurguer_row_2_burguer_2 a:hover {
   background-color: #771717;
+  border-radius: 65px;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.3s ease-in-out;
@@ -836,6 +875,7 @@ html, body {
   font-family: "Alfa Slab One";
   font-size: 1.2rem;
   background-color: #bf2222;
+  border-radius: 10px;
   color: white;
   padding: 15px;
   width: 40%;
@@ -846,6 +886,7 @@ html, body {
 
 .chooseBurguer_row_2_burguer_3 a:hover {
   background-color: #771717;
+  border-radius: 65px;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.3s ease-in-out;
